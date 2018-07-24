@@ -1,0 +1,10 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(x64\Release\)包含从另一个项目(hello-myo-VisualStudio2012.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  hello-myo.cpp
+e:\myodatac_collecter\include\myo\cxx\detail\throwonerror.hpp(39): warning C4297: “myo::ThrowOnError::~ThrowOnError”: 假定函数不引发异常，但确实发生了
+  e:\myodatac_collecter\include\myo\cxx\detail\throwonerror.hpp(39): note: 析构函数或释放器具有一个(可能是隐含的)非引发异常规范
+e:\myodatac_collecter\include\myo\cxx\detail\throwonerror.hpp(45): warning C4297: “myo::ThrowOnError::~ThrowOnError”: 假定函数不引发异常，但确实发生了
+  e:\myodatac_collecter\include\myo\cxx\detail\throwonerror.hpp(45): note: 析构函数或释放器具有一个(可能是隐含的)非引发异常规范
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/OPT:ICF”规范)
+  hello-myo-VisualStudio2013.vcxproj -> E:\myodatac_collecter\collecter\x64\Release\hello-myo-VisualStudio2013.exe
+  Copy required dlls to output directory
+  已复制         1 个文件。

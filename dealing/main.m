@@ -1,3 +1,4 @@
+clear
 
 sen=[16 14 15 0;
      16 1 35 0;
@@ -42,9 +43,9 @@ for n=1:length(file)
     s = regexp(z, '-', 'split');
     hand=char(s(1));
     if strcmp(hand,'MyoLeft' )
-        hands='left';
+        q.hands='left';
     else
-        hands='right';
+        q.hands='right';
     end
     p.snum=str2num(char(s(2)));
     sentence=sen(p.snum,:);
@@ -52,31 +53,34 @@ for n=1:length(file)
     if strcmp(sensor,'accelerometer' )
         p.dnum=3;
         p.znum=402;
-        name='acctrain';
+        q.name='acc';
     else if strcmp(sensor,'orientation' )
             p.dnum=4;
             p.znum=400;
-            name='oritrain';
+            q.name='ori';
          else if strcmp(sensor,'gyro' )   
                 p.dnum=3;
                 p.znum=402;
-                name='gyrtrain';
+                q.name='gyr';
               else if strcmp(sensor,'emg' )
                      p.dnum=8; 
                      p.znum=402;
-                     name='emgtrain';
+                     q.name='emg';
                   else 
                       p.dnum=3;
                       p.znum=400;
-                      name='oltrain';
+                      q.name='ol';
                   end
              end
         end
     end
-    loader(p,file(n).name,sentence,[name,hands,'.txt']);
+    loader(p,file(n).name,sentence,q);
     cd(filed(fnum).name);
 end
 cd('..');
 end
 end
+
+X = sprintf('Finish signals processing');
+disp(X)
 
